@@ -1,0 +1,11 @@
+@import 'reset';
+@import 'variables';
+@import 'global';
+
+// Components
+@import '../components/PageLocker/_PageLocer.scss';
+
+
+// Views
+@import '../views/Page1/_Page1.scss';
+
