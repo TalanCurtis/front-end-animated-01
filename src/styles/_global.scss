@@ -47,6 +47,57 @@ h6 {
     grid-template-columns: 40px 1fr;
 }
 
+// Page Transition
+.fade-enter {
+    position: absolute;
+    animation-name: enter;
+	animation-duration: 1.1s;
+	animation-timing-function: ease;
+	animation-iteration-count: 1;	
+	animation-direction: normal;
+	animation-delay: 0;
+	animation-play-state: running;
+	animation-fill-mode: forwards;
+  }
+  .fade-enter-active {
+  }
+  .fade-exit {
+    animation-name: exit;
+	animation-duration: 1.1s;
+	animation-timing-function: ease;
+	animation-iteration-count: 1;	
+	animation-direction: normal;
+	animation-delay: 0;
+	animation-play-state: running;
+	animation-fill-mode: forwards;
+  }
+  .fade-exit-active {
+  }
+  
+  @keyframes enter {
+    0% {
+        opacity: 0;
+	}
+	99% {
+        opacity: 0;
+	}
+
+	100% {
+        opacity: 1;
+	}
+
+  }
+  @keyframes exit {
+    0% {
+        opacity: 1;
+	}
+	99% {
+        opacity: 1;
+	}
+	100% {
+        opacity: 0;
+    }
+}
 
 // Media query
 @media (min-width:426px){
