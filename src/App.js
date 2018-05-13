@@ -5,6 +5,7 @@ import Page1 from './views/Page1/Page1';
 import Page2 from './views/Page2/Page2';
 import PageLocker from './components/PageLocker/PageLocker';
 import Nav from './components/Nav/Nav';
+import Header from './components/Header/Header';
 // import $ from 'jquery';
 import {TweenLite} from 'gsap';
 import {TransitionGroup, CSSTransition} from 'react-transition-group';
@@ -37,8 +38,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Header/>
         <Nav/>
-        <button onClick={()=>console.log(this.props)}>Props</button>
         <PageLocker/>
         <div className='content'>
         <TransitionGroup>

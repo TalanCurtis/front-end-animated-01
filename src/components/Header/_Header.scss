@@ -1,0 +1,13 @@
+.Header{
+    height: 48px;
+    background-color: blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px 0px 10px;
+    position: relative;
+    .Burger_svg{
+        position: relative;
+        z-index: 1000;
+    }
+}
