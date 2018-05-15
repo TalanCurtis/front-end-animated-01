@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import Burger_svg from '../../images/Burger_svg';
-import Logo_svg from '../../images/Logo_svg';
+import BurgerSVG from '../../images/Burger_svg';
+import LogoSVG from '../../images/Logo_svg';
 import {TweenLite, TweenMax ,  Power4} from 'gsap';
 import Nav from '../Nav/Nav';
 
@@ -14,7 +14,6 @@ class Header extends Component{
     }
 
     handleNavMenu(){
-        console.log('nav menu')
         if(!this.state.isOpen){
             TweenLite.set('.Nav',{visibility: 'visible'})
             TweenMax.staggerTo('.Nav div', .75, {x:'100%', ease:Power4.easeOut}, .2)
@@ -33,8 +32,8 @@ class Header extends Component{
     render(){
         return(
             <div className="Header"> 
-                <Logo_svg className='Logo_svg' height='40px' width='150px' fill='white'/>
-                <Burger_svg className='Burger_svg' height='32px' width='32px' fill='white'  onClick={()=>this.handleNavMenu()}/>
+                <Link to='/' ><LogoSVG className='Logo_svg' height='40px' width='150px' fill='white'/></Link>
+                <BurgerSVG className='Burger_svg' height='32px' width='32px' fill='white'  onClick={()=>this.handleNavMenu()}/>
                 <Nav handleNavMenu={()=>this.handleNavMenu()}/>
             </div>
         )

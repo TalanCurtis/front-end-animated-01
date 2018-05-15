@@ -3,7 +3,7 @@ import React from 'react';
 const Logo_svg = (props) => {
   const {className, height, width, fill , stroke, strokeWidth, onClick } = props
   return (
-     <svg id="logo" viewBox="0 0 150 40" className={className} height={height} width={width} fill={fill} stroke={stroke} strokeWidth={stroke} onClick={onClick}>
+     <svg id="logo" viewBox="0 0 150 40" className={className} height={height} width={width} fill={fill} stroke={stroke} strokeWidth={strokeWidth} onClick={onClick}>
       <circle cx="16.5" cy="20" r="14.5" fill="red"/>
       <path id='square' fill="#0f0" d="M122 7.5h25v25h-25z"/>
       <g>

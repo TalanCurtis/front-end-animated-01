@@ -1,8 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom';
 
 function Nav(props) {
-    console.log('props', props)
     return (
         <div className="Nav">
             <div className='section1' >

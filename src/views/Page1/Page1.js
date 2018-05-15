@@ -9,18 +9,15 @@ class Page1 extends Component{
             data:[]
         }
     }
-    // componentWillMount(){
-    //     this.props.pageLock()
 
-    // }
     componentDidMount(){
         this.props.pageLock()
         axios.get('/api/test').then(res=>{
-            console.log('res', res.data)
             this.setState({data:res.data.list})
             this.props.pageUnlock()
         })
     }
+    
     render(){
         return(
             <div className="Page1"> Page1 view 
