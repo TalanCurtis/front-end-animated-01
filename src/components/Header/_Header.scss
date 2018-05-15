@@ -12,6 +12,11 @@
         z-index: 1000;
         position: relative;
         right: 10px;
+        transition: .5s fill;
+    }
+    .Burger_svg:hover{
+        cursor: pointer;
+        fill: rgb(105, 172, 199);
     }
     .Logo_svg{
         position: relative;
