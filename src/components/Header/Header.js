@@ -16,15 +16,18 @@ class Header extends Component{
     handleNavMenu(){
         console.log('nav menu')
         if(!this.state.isOpen){
-            TweenMax.staggerTo('.Nav div', .75, {y:'100%', ease:Power4.easeOut}, .2)
+            TweenLite.set('.Nav',{visibility: 'visible'})
+            TweenMax.staggerTo('.Nav div', .75, {x:'100%', ease:Power4.easeOut}, .2)
             TweenLite.to('#top ,#bot', .5, {opacity:0})
             TweenLite.to('#mid', .5, {transformOrigin:"center", rotation:45})
             TweenLite.to('#mid-part2', .5, {transformOrigin:"center", rotation:-45})
         }else{
-            TweenMax.to('.Nav div', .5, {y:'0%'})            
+            TweenMax.to('.Nav div', .5, {x:'0%'})            
             TweenLite.to('#top ,#bot', .5, {opacity:1})
             TweenLite.to('#mid', .5, {transformOrigin:"center", rotation:0})
             TweenLite.to('#mid-part2', .5, {transformOrigin:"center", rotation:0})
+            
+            
         }
         this.setState({isOpen:!this.state.isOpen})
     }
