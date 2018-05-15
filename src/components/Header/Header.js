@@ -22,12 +22,10 @@ class Header extends Component{
             TweenLite.to('#mid', .5, {transformOrigin:"center", rotation:45})
             TweenLite.to('#mid-part2', .5, {transformOrigin:"center", rotation:-45})
         }else{
-            TweenMax.to('.Nav div', .5, {x:'0%'})            
+            TweenMax.to('.Nav div', 1.1, {x:'0%'})            
             TweenLite.to('#top ,#bot', .5, {opacity:1})
             TweenLite.to('#mid', .5, {transformOrigin:"center", rotation:0})
             TweenLite.to('#mid-part2', .5, {transformOrigin:"center", rotation:0})
-            
-            
         }
         this.setState({isOpen:!this.state.isOpen})
     }
@@ -37,7 +35,7 @@ class Header extends Component{
             <div className="Header"> 
                 <Logo_svg className='Logo_svg' height='40px' width='150px' fill='white'/>
                 <Burger_svg className='Burger_svg' height='32px' width='32px' fill='white'  onClick={()=>this.handleNavMenu()}/>
-                <Nav/>
+                <Nav handleNavMenu={()=>this.handleNavMenu()}/>
             </div>
         )
     }
