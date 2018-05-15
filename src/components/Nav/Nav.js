@@ -4,18 +4,10 @@ import {Link} from 'react-router-dom';
 function Nav(props) {
     return (
         <div className="Nav">
-            <div className='section1' >
-                <Link to='/' onClick={props.handleNavMenu}>Page 1</Link>
-            </div>
-            <div className='section2'>
-                <Link to='/Page2' onClick={props.handleNavMenu}>Page 2</Link>
-            </div>
-            <div className='section3'>
-                <Link to='/Page2' onClick={props.handleNavMenu} >Page 3</Link>
-            </div>
-            <div className='section4'>
-                <Link to='/Page2' onClick={props.handleNavMenu} >Page 4</Link>
-            </div>
+            <Link to='/' className='section1 navSect' onClick={props.handleNavMenu}>Page 1</Link>
+            <Link to='/Page2' className='section2 navSect' onClick={props.handleNavMenu}>Page 2</Link>
+            <Link to='/Page2' className='section3 navSect' onClick={props.handleNavMenu}>Page 3</Link>
+            <Link to='/Page2' className='section4 navSect' onClick={props.handleNavMenu}>Page 4</Link>
         </div>
     )
 }
