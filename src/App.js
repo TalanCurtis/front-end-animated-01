@@ -4,7 +4,6 @@ import './styles/main.css';
 import Page1 from './views/Page1/Page1';
 import Page2 from './views/Page2/Page2';
 import PageLocker from './components/PageLocker/PageLocker';
-import Nav from './components/Nav/Nav';
 import Header from './components/Header/Header';
 // import $ from 'jquery';
 import {TweenLite} from 'gsap';
@@ -39,7 +38,6 @@ class App extends Component {
     return (
       <div className="App">
         <Header/>
-        <Nav/>
         <PageLocker/>
         <div className='content'>
         <TransitionGroup>
